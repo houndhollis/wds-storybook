@@ -1,33 +1,37 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import DefaultTextFiled from "./components/DefaultTextField";
+import Label from "./components/Label";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1 className="text-2xl text-red-500 underline">Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Label htmlFor="email">이메일</Label>
+      <DefaultTextFiled
+        errorMessage="이메일을 입력해주세요."
+        iconAlt="삭제 이미지"
+        iconPath="https://kr.object.ncloudstorage.com/icons/ic-delete-dark.svg"
+        id="email"
+        isError={true}
+        onChange={() => {}}
+        onIconClick={() => {}}
+        placeholder="이메일"
+        type="text"
+        value=""
+      />
+
+      <br />
+      <Label htmlFor="email">이메일</Label>
+      <DefaultTextFiled
+        errorMessage="이메일을 입력해주세요."
+        iconAlt="삭제 이미지"
+        iconPath="https://kr.object.ncloudstorage.com/icons/ic-delete-dark.svg"
+        id="email"
+        isError={true}
+        onChange={() => {}}
+        onIconClick={() => {}}
+        placeholder="이메일"
+        type="text"
+        value=""
+      />
     </>
   );
 }
